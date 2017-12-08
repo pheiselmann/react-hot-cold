@@ -9,5 +9,8 @@ export const restartGame = () => ({
 	type: RESTART_GAME
 })
 
-
+export const AURAL_UPDATE = 'AURAL_UPDATE';
+export const auralUpdate = () => ({
+	type: AURAL_UPDATE
+})
 
