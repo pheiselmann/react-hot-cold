@@ -1,8 +1,11 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+
 import './guess-list.css';
 
-export default function GuessList(props) {
+export function GuessList(props) {
+  // no need for 'this' keyword, because not a class definition
   const guesses = props.guesses.map((guess, index) => (
     <li key={index}>
       {guess}
@@ -15,3 +18,10 @@ export default function GuessList(props) {
     </ul>
   );
 }
+
+const mapStateToProps = state => {
+  guesses: state.guesses
+}
+
+// allow communication between GuessList and state
+export default connect(mapStateToProps)(GuessList);
