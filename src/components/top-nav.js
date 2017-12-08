@@ -1,5 +1,9 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+
+import {auralUpdate, restartGame} from '../actions';
+
 import './top-nav.css';
 
 export default function TopNav(props) {
@@ -20,7 +24,7 @@ export default function TopNav(props) {
             href="#feedback"
             className="new"
             aria-label="Start a new game"
-            onClick={() => props.onRestartGame()}
+            onClick={() => this.props.dispatch(restartGame())}
           >
             + New Game
           </a>
@@ -31,7 +35,7 @@ export default function TopNav(props) {
             /* the `visuallyhidden` class hides an element 
             while leaving it available to screen reader users  */
             className="visuallyhidden focusable status-link"
-            onClick={() => props.onGenerateAuralUpdate()}
+            onClick={() => this.props.dispatch(auralUpdate())}
           >
             Hear state of game
           </a>
@@ -40,3 +44,7 @@ export default function TopNav(props) {
     </nav>
   );
 }
+
+// Do not pass mapStateToProps, because only need to 
+// add dispatch prop to TopNav component
+export default connect()(TovNav);
