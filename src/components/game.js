@@ -1,4 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+import {addGuess} from '../actions'; 
 
 import Header from './header';
 import GuessSection from './guess-section';
