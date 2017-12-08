@@ -19,4 +19,5 @@ const mapStateToProps = state => {
 	guessCount: state.guesses.length
 };
 
-const default connect(mapStateToProps)(GuessCount);
+// allow communication between GuessCount and state
+export default connect(mapStateToProps)(GuessCount);
