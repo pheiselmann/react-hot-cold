@@ -19,9 +19,9 @@ export function GuessList(props) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
   guesses: state.guesses
-}
+});
 
 // allow communication between GuessList and state
 export default connect(mapStateToProps)(GuessList);

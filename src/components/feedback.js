@@ -29,10 +29,10 @@ export function Feedback(props) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
   guessCount: state.guesses.length,
   feedback: state.feedback
-};
+});
 
 // allow communication between Feedback and state
 export default connect(mapStateToProps)(Feedback);

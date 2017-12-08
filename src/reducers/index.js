@@ -19,7 +19,7 @@ export const hotColdReducer = (state=initialState, action) => {
 			})
 		}
 
-		const difference = Math.abs(guess - this.state.correctAnswer);
+		const difference = Math.abs(guess - state.correctAnswer);
 
 		let feedback;
     	if (difference >= 50) {

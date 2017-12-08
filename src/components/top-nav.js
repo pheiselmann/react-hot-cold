@@ -24,7 +24,7 @@ export function TopNav(props) {
             href="#feedback"
             className="new"
             aria-label="Start a new game"
-            onClick={() => this.props.dispatch(restartGame())}
+            onClick={() => props.dispatch(restartGame())}
           >
             + New Game
           </a>
@@ -35,7 +35,7 @@ export function TopNav(props) {
             /* the `visuallyhidden` class hides an element 
             while leaving it available to screen reader users  */
             className="visuallyhidden focusable status-link"
-            onClick={() => this.props.dispatch(auralUpdate())}
+            onClick={() => props.dispatch(auralUpdate())}
           >
             Hear state of game
           </a>
@@ -47,4 +47,4 @@ export function TopNav(props) {
 
 // Do not pass mapStateToProps, because only need to 
 // add dispatch prop to TopNav component
-export default connect()(TovNav);
+export default connect()(TopNav);
