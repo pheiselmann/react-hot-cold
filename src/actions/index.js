@@ -1,3 +1,6 @@
+// action creator functions for each user interaction
+// that will change state
+
 export const MAKE_GUESS = 'MAKE_GUESS';
 export const makeGuess = guess => ({
 	type: MAKE_GUESS,
