@@ -9,7 +9,7 @@ const initialState = {
 
 export const hotColdReducer = (state=initialState, action) => {
 
-	if (action.type === actions.ADD_GUESS) {
+	if (action.type === actions.MAKE_GUESS) {
 		return Object.assign({}, state, {
 			guesses: [...state.guesses, { action.guess }]
 		});
